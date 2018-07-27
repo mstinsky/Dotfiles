@@ -1,0 +1,47 @@
+
+*background: black
+*foreground: white
+*saveLines:  999999
+
+!-- Xft settings -- !
+Xft.dpi:        144
+Xft.rgba:       rgb
+Xft.autohint:   0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting:    1
+Xft.antialias:  1
+
+! -- Fonts -- !
+URxvt.font: xft:Inconsolata:pixelsize=16:antialias=true:hinting=full, xft:Symbola:pixelsize=19:antialias=true:hinting=full
+URxvt.boldFont: xft:Inconsolata:style=bold:pixelsize=16:antialias=true:hinting=full, xft:Symbola:pixelsize=19:antialias=true:hinting=full
+
+!!*faceSize:              10
+*bellIsUrgent:          true
+
+!! scroll
+!! do not scroll with output
+URxvt*scrollTtyOutput:      false
+!! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer:     true
+!! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress:    true
+
+!! scrollback buffer
+URxvt.secondaryScreen:  1
+URxvt.secondaryScroll:  0
+URxvt.secondaryWheel:   1
+
+!! scrollbar
+*scrollBar:             false
+
+URxvt*termName:         rxvt
+
+!! disable default bindings for Control-Shift
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!! Perl extensions
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,pasta
+
+URxvt.keysym.Control-Shift-V: perl:pasta:paste
